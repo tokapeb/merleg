@@ -9,6 +9,7 @@ body {
 
   p {
     font-size: 1.6rem;
+    line-height: 2.6rem;
   }
 
   img {
@@ -17,12 +18,22 @@ body {
   }
 
   .highlighted {
-    padding: 4rem 0;
     background-image: url('../images/header_pic001.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: -260px;
     margin-bottom: 4rem;
+
+    .pattern {
+      padding: 8rem 0;
+      background-image: url('../images/pattern_003.png');
+      background-repeat: repeat;
+//      opacity: .2;
+
+      .container {
+        opacity: 1;
+      }
+    }
 
     h1 {
       color: @color-white;
