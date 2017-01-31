@@ -1,0 +1,65 @@
+// Benefits.
+body {
+  padding-top: 70px;
+
+  hr {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .highlighted {
+    padding: 4rem 0;
+    background-image: url('../images/header_pic001.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -260px;
+    margin-bottom: 4rem;
+
+    h1 {
+      color: @color-white;
+      text-shadow: 2px 2px 1px rgba(0, 0, 0, 1);
+    }
+  }
+
+  .card-container {
+    display: flex;
+    align-items: stretch;
+
+    .benefit-card {
+      padding: 1rem;
+      margin: 1rem;
+      box-shadow: -2px 4px 20px 0px rgba(0,0,0,0.29);
+
+      .btn {
+        margin: 3rem 0;
+      }
+
+      .benefit-icon {
+        color: @color-brand-blue-light;
+        font-size: 3rem;
+        margin: 3rem 0;
+      }
+    }
+  }
+
+  @media(max-width: 768px) {
+    .card-container {
+      display: block;
+    }
+  }
+}
+
+@media(min-width:768px) {
+  body {
+    padding-top: 90px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+  }
+}
