@@ -7,7 +7,7 @@ body {
     margin-top: 4rem;
   }
 
-  p {
+  p, li {
     font-size: 1.6rem;
     line-height: 2.6rem;
   }
@@ -28,16 +28,39 @@ body {
       padding: 8rem 0;
       background-image: url('../images/pattern_003.png');
       background-repeat: repeat;
-//      opacity: .2;
-
-      .container {
-        opacity: 1;
-      }
     }
 
     h1 {
       color: @color-white;
       text-shadow: 2px 2px 1px rgba(0, 0, 0, 1);
+    }
+  }
+
+  &.page-szolgaltatasok {
+    .highlighted {
+      background-image: none;
+      background-color: @color-brand-grey-light;
+
+      ul.menu {
+        text-align: center;
+        margin: 2rem 0;
+
+        li {
+          display: inline-block;
+          padding: 2rem 4rem;
+
+          a {
+            font-size: 1.7rem;
+            color: @color-brand-blue-light;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    .target-tag {
+      position: relative;
+      top: -100px;
     }
   }
 

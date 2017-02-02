@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="./icons/favicon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="./icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
+
+    <title>Mérlegkészítő-, Javító és Kereskedelmi Kft.</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/small-business.css" rel="stylesheet">
+
+    <!-- My Custom Css -->
+    <link href="css/merleg.css" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700|Playfair+Display&subset=latin-ext');
+        @import url('https://fonts.googleapis.com/css?family=Raleway:400,600&subset=latin-ext');
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="page-szolgaltatasok szolgaltatasok">
+    <!-- Modal -->
+    <div id="ajanlatModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Kapcsolat</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="containter">
+                        <div class="row">
+                            <form class="form-horizontal" name="commentform" method="post" action="send_form_email.php">
+                                <div class="col-xs-8">
+                                    <div class="form-group">
+                                        <label for="InputName" class="col-lg-4 control-label">Név</label>
+                                        <div class="col-lg-8">
+                                            <input type="text" class="form-control" name="first_name" id="first_name" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="InputEmail" class="col-lg-4 control-label">E-mail</label>
+                                        <div class="col-lg-8">
+                                            <input type="email" class="form-control" id="email" name="email" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="InputTel" class="col-lg-4 control-label">Telefon</label>
+                                        <div class="col-lg-8">
+                                            <input type="tel" class="form-control" id="phone" placeholder="99-99-999-9999" name="phone" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="InputAddress" class="col-lg-4 control-label">Postai cím</label>
+                                        <div class="col-lg-8">
+                                            <input type="text" class="form-control" id="address" name="address">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="InputMessage" class="col-lg-4 control-label">Üzenet</label>
+                                        <div class="col-lg-8">
+                                            <textarea name="comments" id="comments" class="form-control" rows="5" required></textarea>
+                                        </div>
+                                    </div>
+
+                                    <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
+                                </div>
+                            </form>
+                            <hr class="featurette-divider hidden-lg">
+                            <div class="col-xs-4 text-right ">
+                                <address>
+                                    <h3>Kapcsolat</h3>
+                                    <p>Szeged, 6724<br>
+                                    Hétvezér utca 26/B.<br>
+                                    Tel: 06 62/429-471<br>
+                                    Fax: 06 62/425-234</p>
+                                </address>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div><!-- End of Modal body -->
+            </div><!-- End of Modal content -->
+        </div><!-- End of Modal dialog -->
+    </div><!-- End of Modal -->
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 799 160" enable-background="new 0 0 799 160" xml:space="preserve">
+<path d="M7.3,87.1c0.3-0.4,0.6-0.7,0.9-1.1c6.5-12.1,12.9-24.2,19.4-36.3c0.2-0.4,0.4-0.9,0.7-1.4c-1-0.1-1.9-0.1-2.8-0.1
+	c0-1.2,0-2.3,0-3.6c27.6,0,55.1,0,82.8,0c0,0.6,0,1.2,0,1.8c0,0.6,0,1.2,0,1.8c-1,0-1.8,0.1-2.8,0.1c0.3,0.6,0.5,1.1,0.7,1.5
+	c6.2,11.6,12.3,23.3,18.7,34.8c1.3,2.3,1.5,4.5,1.1,6.9c-1.6,11.2-10.2,19.1-21.5,19.9c-13,0.9-24.1-9.5-24.3-22.4
+	c0-1.2,0.3-2.3,0.8-3.3c6.4-12,12.8-23.9,19.2-35.9c0.2-0.4,0.4-0.9,0.7-1.4c-10.2,0-20.2,0-30.3,0c0,0.7,0,1.4,0,2.2
+	c5,0,10,0,15.1,0c0,1.3,0,2.5,0,3.8c-5,0-10,0-15.1,0c0,20.8,0,41.5,0,62.3c5,0,10,0,15.1,0c0,2.5,0,4.9,0,7.4
+	c-12.6,0-25.1,0-37.8,0c0-2.4,0-4.8,0-7.3c5,0,9.9,0,15,0c0-20.8,0-41.4,0-62.3c-5,0-10,0-15.1,0c0-1.4,0-2.5,0-3.7
+	c5.1,0,10,0,15.1,0c0-0.8,0-1.5,0-2.3c-10,0-20.1,0-30.3,0c0.4,0.8,0.8,1.6,1.2,2.4C40,61.9,46,73.3,52.2,84.6
+	c1.2,2.2,1.4,4.3,1.1,6.5c-1.2,11.4-10.5,19.9-22.5,20.2c-11.1,0.3-20.5-7.3-22.8-18c-0.4-1.9-0.5-3.8-0.7-5.7
+	C7.3,87.4,7.3,87.2,7.3,87.1z M30.5,52.1c-6.3,11.8-12.4,23.2-18.6,34.8c12.5,0,24.7,0,37.2,0C42.9,75.3,36.8,63.8,30.5,52.1z
+	 M103.1,52.1c-6.3,11.8-12.4,23.2-18.6,34.8c12.5,0,24.7,0,37.2,0C115.5,75.3,109.4,63.8,103.1,52.1z"/>
+<rect x="92" y="19" fill="none" width="553" height="384"/>
+<text transform="matrix(1 0 0 1 157.5449 69.9028)"><tspan x="0" y="0" font-family="'Raleway'" font-size="72">Mérlegkészítő</tspan><tspan x="10.7" y="72" font-family="'Raleway'" font-size="36">Javító és Kereskedelmi Kft.</tspan></text>
+</svg>
+
+
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav pull-right">
+                    <li>
+                        <a href="index.html">Főoldal</a>
+                    </li>
+                    <li>
+                        <a href="szolgaltatasok.html">Szolgáltatások</a>
+                    </li>
+                    <li>
+                        <a href="#">Termékek</a>
+                    </li>
+                    <li>
+                        <a href="#">Kapcsolat</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+        <!-- Call to Action Well -->
+        <div class="highlighted">
+            <div class="nav sub-navigation">
+                <div class="container">
+                    <ul class="menu">
+                        <li><a href="#kalibralas">Kalibrálás</a></li>
+                        <li><a href="#hitelesites">Hitelesítés</a></li>
+                        <li><a href="#javitas">Javítás</a></li>
+                        <li><a href="#javitas">Karbantartás</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Content Row -->
+
+        <!-- Kalibralas -->
+        <div class="row">
+            <div id="kalibralas" class="target-tag"></div>
+            <div class="col-sm-12">
+                <h2 class="section-title">Kalibrálás</h2>
+            </div>
+            <div class="col-sm-8">
+                <p>A kalibrálással meghatározzuk a tömegmérő berendezés mérőképességét. A rendszeres kalibrálás biztosítja a megfelelőséget, és ezáltal elkerülhetjük a pontatlan mérések okozta veszteségeket. A súlyok és mérlegek kalibrálásából (NAH) akkreditált kalibrálási bizonyítványt adunk.</p>
+                <p>Ajánlatért és további informáciáért foduljon hozzánk.</p>
+                <a href="#ajanlatModal" role="button" data-toggle="modal" data-subject="Kalibrálás Információ" class="btn btn-default btn-lg pull-left">Ajánlat / Információ</a>
+            </div>
+
+            <div class="col-sm-4">
+                <img src="http://placehold.it/350x150">
+            </div>
+
+        </div>
+        <hr>
+        <!-- /.Kalibralas -->
+
+        <!-- Hitelesites -->
+        <div class="row">
+            <div id="hitelesites" class="target-tag"></div>
+            <div class="col-sm-12">
+                <h2 class="section-title">Hitelesítés</h2>
+            </div>
+            <div class="col-sm-4">
+                <img src="http://placehold.it/350x150">
+            </div>
+            <div class="col-sm-8">
+                <p>A mérlegek és súlyok hitelesítését a nemzeti és nemzetközi előírásoknak, szabványoknak való megfelelőség alapján végezzük. A sikeres hitelesítést eredményeként tanúsító jel (hitelesítési bélyeg, plomba stb.) és hitelesítési bizonyítvány készül a mérleg mérésügyi hitelesítésségéről.</p>
+                <ul>
+                    <li>Vállaljuk a mérlegek, 2 évente szükséges, időszakos hitelesítsését. Biztosítjuk hozzá a megfelelő etalon súlyokat.</li>
+                    <li>MKEH-MH által engedélyezett laborral rendelkezünk (vállalás max. 2 t-ig).</li>
+                    <li>I., II., III. osztálbya sorolt mérlegek hitelesítése.</li>
+                    <li>F2 pontosságú súlyoktól az M2 súlyokig tudunk hitelesíteni.</li>
+                </ul>
+                <p>Ajánlatért és további informáciáért forduljon hozzánk.</p>
+                <a href="#ajanlatModal" role="button" data-toggle="modal" data-subject="Hitelesítés Információ" class="btn btn-default btn-lg pull-right">Ajánlat / Információ</a>
+            </div>
+        </div>
+        <hr>
+        <!-- /.Hitelesites -->
+
+        <!-- javitas -->
+        <div class="row">
+            <div id="javitas" class="target-tag"></div>
+            <div class="col-sm-12">
+                <h2 class="section-title">Javítás, karbantartás</h2>
+            </div>
+            <div class="col-sm-8">
+                <p>A mérőberendezések folyamatos rendelkezésre állása fontos a termelékenység biztosításához, ha meghibásodik vagy nem a követelményeknek megfelelően teljesít, a helyzetet minél gyorsabban vissza kell állítani a normál működésre.
+                    Ennek megoldásához a helyszíni és telephelyi javításokat is kínálunk, amelyik Önnek kényelmesebb.</p>
+                <p>A javítások és karbantartások alatt:</p>
+                <ul>
+                    <li>megismeri a probléma hátterét,</li>
+                    <li>diagnosztizáljuk a hiba okát és annak forrását,</li>
+                    <li>ennek megfelelően gyors végrehajtási időt vállalunk,</li>
+                    <li>költséghatékony diagnosztikával és javítással dolgozunk.</li>
+                </ul>
+
+                <p>Ajánlatért és további informáciáért foduljon hozzánk.</p>
+                <a href="#ajanlatModal" role="button" data-toggle="modal" data-subject="Javítás, karbantartás információ" class="btn btn-default btn-lg pull-left">Ajánlat / Információ</a>
+
+            </div>
+            <div class="col-sm-4">
+                <img src="http://placehold.it/350x150">
+            </div>
+        </div>
+        <!-- /.javitas -->
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <span class="svg-logo-footer">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 496 395" enable-background="new 0 0 496 395" xml:space="preserve">
+<path d="M175.3,100.8c0.3-0.4,0.6-0.7,0.9-1.1c6.5-12.1,12.9-24.2,19.4-36.3c0.2-0.4,0.4-0.9,0.7-1.4c-1-0.1-1.9-0.1-2.8-0.1
+	c0-1.2,0-2.3,0-3.6c27.6,0,55.1,0,82.8,0c0,0.6,0,1.2,0,1.8c0,0.6,0,1.2,0,1.8c-1,0-1.8,0.1-2.8,0.1c0.3,0.6,0.5,1.1,0.7,1.5
+	c6.2,11.6,12.3,23.3,18.7,34.8c1.3,2.3,1.5,4.5,1.1,6.9c-1.6,11.2-10.2,19.1-21.5,19.9c-13,0.9-24.1-9.5-24.3-22.4
+	c0-1.2,0.3-2.3,0.8-3.3c6.4-12,12.8-23.9,19.2-35.9c0.2-0.4,0.4-0.9,0.7-1.4c-10.2,0-20.2,0-30.3,0c0,0.7,0,1.4,0,2.2
+	c5,0,10,0,15.1,0c0,1.3,0,2.5,0,3.8c-5,0-10,0-15.1,0c0,20.8,0,41.5,0,62.3c5,0,10,0,15.1,0c0,2.5,0,4.9,0,7.4
+	c-12.6,0-25.1,0-37.8,0c0-2.4,0-4.8,0-7.3c5,0,9.9,0,15,0c0-20.8,0-41.4,0-62.3c-5,0-10,0-15.1,0c0-1.4,0-2.5,0-3.7
+	c5.1,0,10,0,15.1,0c0-0.8,0-1.5,0-2.3c-10,0-20.1,0-30.3,0c0.4,0.8,0.8,1.6,1.2,2.4c6.1,11.3,12.1,22.7,18.3,34
+	c1.2,2.2,1.4,4.3,1.1,6.5c-1.2,11.4-10.5,19.9-22.5,20.2c-11.1,0.3-20.5-7.3-22.8-18c-0.4-1.9-0.5-3.8-0.7-5.7
+	C175.3,101.2,175.3,101,175.3,100.8z M198.5,65.8c-6.3,11.8-12.4,23.2-18.6,34.8c12.5,0,24.7,0,37.2,0
+	C210.9,89,204.8,77.6,198.5,65.8z M271.1,65.8c-6.3,11.8-12.4,23.2-18.6,34.8c12.5,0,24.7,0,37.2,0C283.5,89,277.4,77.5,271.1,65.8z
+	"/>
+<rect x="-41.8" y="154.7" fill="none" width="593" height="384"/>
+<text transform="matrix(1 0 0 1 23.7548 205.6246)"><tspan x="0" y="0" font-family="'Raleway'" font-size="72">Mérlegkészítő</tspan><tspan x="10.7" y="72" font-family="'Raleway'" font-size="36">Javító és Kereskedelmi Kft.</tspan></text>
+</svg>
+                        </span>
+
+                    <p>minden jog fenntartva © 2017</p>
+                </div>
+            </div>
+        </footer>
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
