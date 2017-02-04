@@ -1,6 +1,6 @@
 // Benefits.
 body {
-  padding-top: 70px;
+  padding-top: 90px;
   margin-bottom: 250px;
 
   hr {
@@ -35,6 +35,14 @@ body {
       color: @color-white;
       text-shadow: 2px 2px 1px rgba(0, 0, 0, 1);
     }
+
+    @media(max-width:768px) {
+      background-position-y: 0;
+
+      h1 {
+        text-align: center;
+      }
+    }
   }
 
   &.page-termekek,
@@ -49,12 +57,12 @@ body {
 
         li {
           display: inline-block;
-          padding: 2rem 4rem;
+          padding: 1rem 4rem;
 
           a {
             font-size: 1.7rem;
             color: @color-brand-blue-light;
-            font-weight: 700;
+            font-weight: 400;
           }
         }
       }
@@ -92,10 +100,30 @@ body {
       display: block;
     }
   }
+
+  @media (min-width: 992px) {
+    body {
+      padding-top: 90px;
+    }
+  }
 }
 
-@media(min-width:768px) {
+@media(max-width:991px) {
   body {
-    padding-top: 90px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    padding-top: 140px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+
+    #topbutton {
+      top: 140px;
+    }
+  }
+}
+
+@media(max-width:768px) {
+  body {
+    #topbutton {
+      top: 51px;
+    }
+
+    padding-top: 51px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
   }
 }
