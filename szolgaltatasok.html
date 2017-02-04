@@ -185,6 +185,7 @@
         </div>
         <!-- /.container -->
     </nav>
+    <div id="top" class="target-tag"></div>
 
         <!-- Call to Action Well -->
         <div class="highlighted">
@@ -277,6 +278,7 @@
         </div>
         <!-- /.javitas -->
         <!-- /.row -->
+        <div id="topbutton"><a href="#top"><i class="glyphicon glyphicon-arrow-up"></i> Tetejére</a></div>
     </div>
     <!-- /.container -->
 
@@ -320,6 +322,19 @@
 
     <!-- Merleg page functions. -->
     <script src="js/merlegFunctions.js"></script>
+
+    <!-- Scroll functiona. -->
+    <script src="js/jquery.combinedScroll.js"></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+
+            // Hook up the current state to the nav bar
+            $('.sub-navigation').onePageNav();
+            $('#topbutton').onePageNav();
+
+        });
+    </script>
 
 </body>
 

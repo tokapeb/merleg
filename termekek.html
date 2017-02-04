@@ -132,6 +132,7 @@
     </div><!-- End of Modal -->
 
     <!-- Navigation -->
+
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -185,7 +186,7 @@
         </div>
         <!-- /.container -->
     </nav>
-
+    <div id="top" class="target-tag"></div>
         <!-- Call to Action Well -->
         <div class="highlighted">
             <div class="nav sub-navigation">
@@ -361,6 +362,7 @@
         <!-- /.jarmumerleg -->
 
         <!-- /.row -->
+        <div id="topbutton"><a href="#top"><i class="glyphicon glyphicon-arrow-up"></i> Tetejére</a></div>
     </div>
     <!-- /.container -->
 
@@ -404,6 +406,19 @@
 
     <!-- Merleg page functions. -->
     <script src="js/merlegFunctions.js"></script>
+
+    <!-- Scroll functiona. -->
+    <script src="js/jquery.combinedScroll.js"></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+
+            // Hook up the current state to the nav bar
+            $('.sub-navigation').onePageNav();
+            $('#topbutton').onePageNav();
+
+        });
+    </script>
 
 </body>
 
