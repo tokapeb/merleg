@@ -11,12 +11,13 @@ if(isset($_POST['email'])) {
     if(!isset($_POST['first_name']) ||
         !isset($_POST['email']) ||
         !isset($_POST['comments'])) {
-        died('We are sorry, but there appears to be a problem with the form you submitted.');
+        die('We are sorry, but there appears to be a problem with the form you submitted.');
     }
 
     $first_name = $_POST['first_name']; // required
 
-    $email_from = $_POST['email']; // required
+    $email_from = 'merleg@merlegszeged.hu'; // required
+    $email_from_real = $_POST['email']; // required
     $comments = $_POST['comments']; // required
 
     $error_message = "";
@@ -24,7 +25,8 @@ if(isset($_POST['email'])) {
   if(!preg_match($email_exp,$email_from)) {
     $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
   }
-    $string_exp = "/^[A-Za-z\s.'-]+$/";
+//    $string_exp = "/^[A-Za-z\s.'-]+$/";
+    $string_exp = "/^\p{L}+(?:[_. -]\p{L}+)*$/";
   if(!preg_match($string_exp,$first_name)) {
     $error_message .= 'The First Name you entered does not appear to be valid.<br />';
   }
@@ -33,7 +35,7 @@ if(isset($_POST['email'])) {
     $error_message .= 'The Comments you entered do not appear to be valid.<br />';
   }
   if(strlen($error_message) > 0) {
-    died($error_message);
+    die($error_message);
   }
     $email_message = "Form details below.\n\n";
 
@@ -53,9 +55,5 @@ $headers = 'From: '.$email_from."\r\n".
 'X-Mailer: PHP/' . phpversion();
 @mail($email_to, $email_subject, $email_message, $headers);
 sleep(1);
-echo "<meta http-equiv='refresh' content=\"0; url=http://graphicdesk.ro/index.html\">";
-?>
-
-<?php
 }
-?>-->
+?>
